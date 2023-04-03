@@ -28,7 +28,9 @@ function LoginForm() {
   return (
     <div className="w-full min-w-[360px] max-w-xs">
       <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        {error.length ? <p class="text-red-500 text-xs mb-4">{error}</p> : null}
+        {error.length ? (
+          <p className="text-red-500 text-xs mb-4">{error}</p>
+        ) : null}
         <div className="mb-4">
           <label
             className="block text-gray-700 text-left text-sm font-bold mb-2 "
@@ -77,27 +79,6 @@ function LoginForm() {
           </a>
         </div>
       </form>
-    </div>
-  )
-  return (
-    <div className="LoginForm">
-      <h1>Login</h1>
-      {error.length ? <p className="text-red-700">{error}</p> : null}
-      <label>
-        Email:
-        <input value={email} onChange={e => setEmail(e.target.value)} />
-      </label>
-      <label>
-        Password:
-        <input
-          type="password"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-        />
-      </label>
-      <button className="btn" onClick={onSubmit}>
-        Log in
-      </button>
     </div>
   )
 }
