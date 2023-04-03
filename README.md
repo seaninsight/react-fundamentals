@@ -5,9 +5,21 @@
 - You have a basic understanding of HTML and JavaScript
 - You have a basic understanding of Node, npm, and bundlers — the basic structure of modern JS SPA’s
 
+## [tl;dr](https://www.youtube.com/watch?v=Tn6-PIqc4UM&t=1s)
+
+- React is a library for making components
+- Components are just functions
+- Pass data with props
+- Track component data with state
+- If props or state change, the component re-renders
+- Use hooks for advanced functionaity
+- Hooks are also just functions
+- Data always flows parent -> child
+- Use third-party libraries for framework-like experience
+
 ## React at a high level
 
-- React is a library for creating stateful, interactive UI’s, not a framework
+- React is a library for creating stateful, interactive UI’s, [not a framework](https://react.dev/learn/start-a-new-react-project)
   - Batteries not included
   - You will need other tools outside of React to complete your app
     - Routing, data fetching, global state, etc.
@@ -15,7 +27,7 @@
 - React has a one-way data flow (parent -> children)
 - React Native
 
-## Essential JS for React
+## [Essential JS](https://www.javascripttutorial.net/es6/) for React
 
 - Functions / Arrow functions
 - Array and array methods
@@ -31,10 +43,11 @@
 ## What is a component?
 
 - Components are functions
-  - React.createElement / JSX not required
-- JSX is not ugly 😉 Quick overview of JSX
-- State
-- Props
+  - [React.createElement](https://react.dev/reference/react/createElement) / JSX not required
+  - [Thinking in react](https://react.dev/learn/thinking-in-react)
+- [JSX](https://react.dev/learn/writing-markup-with-jsx) is not ugly 😉
+- [State](https://react.dev/learn/managing-state)
+- [Props](https://react.dev/learn/passing-props-to-a-component)
 
 ## Structuring a React app
 
@@ -51,8 +64,8 @@
 
 ## A word about class components
 
-- This was formerly the only React API
-- React discourages classes and considers them legacy
+- The legacy [Component class](https://react.dev/reference/react/Component) was formerly the only way to create components
+- React discourages classes and considers them _legacy_
 - Error boundaries are the only exception to this rule
 
 ## Props and State
