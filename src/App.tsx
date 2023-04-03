@@ -10,7 +10,11 @@ function App() {
     <div className="App">
       <div>
         <a href="https://insight.com" target="_blank">
-          <img src={insightLogo} className="logo" alt="Insight logo" />
+          <img
+            src={insightLogo}
+            className="logo w-[300px] h-auto mx-auto"
+            alt="Insight logo"
+          />
         </a>
       </div>
       <h1>React Fundamentals</h1>
