@@ -36,6 +36,12 @@
 - State
 - Props
 
+## Structuring a React app
+
+- No forced structure
+- Convention
+- How to structure your components
+
 ## How does React connect components to a web page?
 
 - index.js
@@ -49,12 +55,25 @@
 - React discourages classes and considers them legacy
 - Error boundaries are the only exception to this rule
 
+## Props and State
+
+- each component has its own "state"
+- props is an array passed to child components to share data
+
 ## The component lifecycle
 
 - One-way data flow
 - What triggers a render?
 - Component mounting/unmounting
-- Who owns what data? Passing functions and data…
+
+## Global state
+
+- "prop drilling"
+- React's Context API
+- third-party libs
+  - Redux / Redux Toolkit
+  - Zustand
+  - Jotai
 
 ## Functional components and hooks
 
@@ -100,12 +119,6 @@
 - React Router
 - Static vs dynamic routes and data
 - Code splitting (router is a good place to do it)
-
-## Global State: Redux / Zustand / etc.
-
-- Third party libraries
-- Redux and Redux Toolkit are king
-- Newcomers and their goals
 
 ## Data Fetching
 

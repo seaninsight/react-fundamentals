@@ -2,8 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Readme from "./pages/Readme";
+import Hello from "./pages/Hello";
 import "./index.css";
-import Hello from "./routes/hello";
 
 const router = createBrowserRouter(
   [
@@ -14,6 +15,10 @@ const router = createBrowserRouter(
     {
       path: "/hello",
       element: <Hello name="Sean" />,
+    },
+    {
+      path: "/readme",
+      element: <Readme />,
     },
   ],
   { basename: "/react-fundamentals" }
