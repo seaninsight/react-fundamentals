@@ -24,26 +24,26 @@
   - You will need other tools outside of React to complete your app
     - Routing, data fetching, global state, etc.
 - React has a one-way data flow (parent -> children)
-- React Native
+- [React Native](https://reactnative.dev/)
 
 ## [Essential JS](https://www.javascripttutorial.net/es6/) for React
 
 - Functions / Arrow functions
 - Array and array methods
-  - map, filter, find, reduce, etc.
+  - `map`, `filter`, `find`, `reduce`, etc.
 - Destructuring
-  - const { onChange, someData } = props
-  - const [value, setValue] = useState(0)
+  - `const { onChange, someData } = props`
+  - `const [value, setValue] = useState(0)`
 - Template literals with backticks
-  - `Hello, ${name}`
+  - `\`Hello, ${name}\``
 - Ternaries
-  - isDaytime ? <Daytime sky="blue"> : <Nighttime sky="black">
+  - isDaytime ? &lt;Daytime sky="blue"&gt; : &lt;Nighttime sky="black"&gt;
 
 ## TypeScript
 
-- Quick overview of TS in React
-- Component interfaces
-- Typing components, elements, events, etc.
+- Quick overview of [TS in React](https://github.com/piotrwitek/react-redux-typescript-guide#react--redux-in-typescript---complete-guide)
+- Component [interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html)
+- [Typing components](https://kentcdodds.com/blog/how-to-write-a-react-component-in-typescript)
 
 ## What is a component?
 
