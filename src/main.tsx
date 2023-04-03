@@ -1,32 +1,32 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Readme from "./pages/Readme";
-import Hello from "./pages/Hello";
-import "./index.css";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Hello from './pages/Hello'
+import LoginPage from './pages/Login'
+import './index.css'
 
 const router = createBrowserRouter(
   [
     {
-      path: "/",
+      path: '/',
       element: <App />,
     },
     {
-      path: "/hello",
+      path: '/hello',
       element: <Hello name="Sean" />,
     },
     {
-      path: "/readme",
-      element: <Readme />,
+      path: '/login',
+      element: <LoginPage />,
     },
   ],
-  { basename: "/react-fundamentals" }
-);
+  { basename: '/react-fundamentals' },
+)
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     {/* <App /> */}
     <RouterProvider router={router} />
-  </React.StrictMode>
-);
+  </React.StrictMode>,
+)
