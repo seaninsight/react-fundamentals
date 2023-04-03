@@ -36,7 +36,7 @@
   - `const [value, setValue] = useState(0)`
 - Template literals with backticks
   - ```
-      Hello, ${name}
+      `Hello, ${name}`
     ```
 - Ternaries
   - isDaytime ? &lt;Daytime sky="blue"&gt; : &lt;Nighttime sky="black"&gt;
