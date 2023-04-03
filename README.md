@@ -39,7 +39,7 @@
       `Hello, ${name}`
     ```
 - Ternaries
-  - `isDaytime ? <Daytime sky="blue"> : <Nighttime sky="black">`
+  - `isDaytime ? <Daytime sky="blue" /> : <Nighttime sky="black" />`
 
 ## TypeScript
 
