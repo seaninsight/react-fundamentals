@@ -23,7 +23,6 @@
   - Batteries not included
   - You will need other tools outside of React to complete your app
     - Routing, data fetching, global state, etc.
-- React is unopinionated
 - React has a one-way data flow (parent -> children)
 - React Native
 
@@ -39,6 +38,12 @@
   - `Hello, ${name}`
 - Ternaries
   - isDaytime ? <Daytime sky="blue"> : <Nighttime sky="black">
+
+## TypeScript
+
+- Quick overview of TS in React
+- Component interfaces
+- Typing components, elements, events, etc.
 
 ## What is a component?
 
@@ -88,6 +93,25 @@
   - [Zustand](https://zustand-demo.pmnd.rs/)
   - [Jotai](https://jotai.org/)
 
+## Events
+
+- [React events](https://react.dev/learn/responding-to-events) like JS events but are actually React synthetic events
+- Removing events when component unmounts to prevent memory leaks
+
+## JSX
+
+- JSX is a metaphor for HTML
+- Neutron classes can just plug in
+
+## Adding Styles
+
+- Import CSS file directly
+- CSS naming conventions
+- PostCSS
+- CSS in JS
+- MUI
+- Tailwind
+
 ## Functional components and hooks
 
 - [Lifecycle methods](https://legacy.reactjs.org/docs/react-component.html) previously only available in classes
@@ -96,36 +120,6 @@
 - [useRef](https://react.dev/reference/react/useRef) to persist non-state data between renders
 - [useMemo](https://react.dev/reference/react/useMemo) and [useCallback](https://react.dev/reference/react/useCallback) for optimization
 - [Custom hooks](https://react.dev/learn/reusing-logic-with-custom-hooks) and [third-party hooks](https://usehooks.com/)
-
-## Events
-
-- [React events](https://react.dev/learn/responding-to-events) like JS events but are actually React synthetic events
-- Removing events when component unmounts to prevent memory leaks
-
-## Controlled vs Uncontrolled Inputs
-
-- Quick demo of a form
-- Show how a form could be managed without controlled inputs
-- Show how a form could be managed with controlled inputs
-
-## Adding Styles
-
-- Import CSS file directly
-- CSS in JS
-- Tailwind classes
-- MUI
-- Super quick overview of all of the above
-
-## Atomic Design
-
-- What is it?
-- Why use it?
-
-## TypeScript
-
-- Quick overview of TS in React
-- Component interfaces
-- Typing components, elements, events, etc.
 
 ## Routing
 
@@ -137,6 +131,18 @@
 
 - Axios and native Fetch API
 - Graphql
+
+# Tools
+
+- ESLint
+- Prettier
+- Jest
+- Cypress
+
+## Atomic Design
+
+- What is it?
+- Why use it?
 
 ## NextJS
 
