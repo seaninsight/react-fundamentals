@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
-import README from "../../README.md";
+// import README from "../../README.md";
 
 export default function Readme() {
   // const [readmeText, setReadmeText] = useState("");
