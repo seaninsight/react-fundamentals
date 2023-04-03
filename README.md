@@ -76,7 +76,7 @@
 ## Props and State
 
 - Each component has its own [state](https://react.dev/learn/state-a-components-memory)
-- [Props](https://react.dev/learn/passing-props-to-a-component) is an array passed to child components to share data
+- [Props](https://react.dev/learn/passing-props-to-a-component) is an object passed to child components to share data
 
 ## The component lifecycle
 
@@ -100,17 +100,21 @@
 
 ## JSX
 
-- JSX is a metaphor for HTML
-- Neutron classes can just plug in
+- [JSX](https://react.dev/learn/writing-markup-with-jsx) is a metaphor for HTML
+- It looks like HTML. [Jump back into plain JS/TS with `{curlyBraces}`](https://react.dev/learn/javascript-in-jsx-with-curly-braces)
+- [Map arrays to components](https://react.dev/learn/rendering-lists) (particularly useful and common case)
+- Neutron classes can just plug in via `className`
 
 ## Adding Styles
 
-- Import CSS file directly
-- CSS naming conventions
-- PostCSS
-- CSS in JS
-- MUI
-- Tailwind
+- Import or link CSS file directly, [naming classes with `className`](https://react.dev/learn#adding-styles)
+- CSS naming conventions ([BEM](https://getbem.com/introduction/), etc)
+- [PostCSS](https://postcss.org/)
+- classnames package ([NPM](https://www.npmjs.com/package/classnames#usage-with-reactjs))
+- [CSS Modules](https://github.com/css-modules/css-modules)
+- [MUI](https://mui.com/material-ui/getting-started/overview/)
+- [Tailwind](https://tailwindcss.com/docs/installation)
+- [DaisyUI](https://daisyui.com/) for Tailwind
 
 ## Functional components and hooks
 
@@ -123,29 +127,31 @@
 
 ## Routing
 
-- React Router
-- Static vs dynamic routes and data
-- Code splitting (router is a good place to do it)
+- [React Router](https://reactrouter.com/en/main)
+- Import [`<Link>` components](https://reactrouter.com/en/main/components/link) instead of `<a>` tags
+- Static vs dynamic [routes](https://reactrouter.com/en/main/route/route) and data
+- [Code splitting with `lazy()`](https://react.dev/reference/react/lazy) (router is a good place to do it)
 
 ## Data Fetching
 
-- Axios and native Fetch API
-- Graphql
+- [Axios](https://axios-http.com/docs/intro) and native [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+- [Graphql](https://graphql.org/)
 
 # Tools
 
-- ESLint
-- Prettier
-- Jest
-- Cypress
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Jest](https://jestjs.io/)
+- [Cypress](https://www.cypress.io/)
 
 ## Atomic Design
 
-- What is it?
-- Why use it?
+- [What is it?](https://medium.com/@janelle.wg/atomic-design-pattern-how-to-structure-your-react-application-2bb4d9ca5f97)
+- [Why use it?](https://blog.logrocket.com/atomic-design-react-native/)
 
-## NextJS
+## NextJS & Remix
 
-- Isomorphic React exists without Next, but next makes it better
+- Isomorphic React exists without [Next](https://nextjs.org/), but Next makes it better
 - So so fast
-- Where rendering happens: SSR, SSG, Client-side
+- Where rendering happens: [SSR, SSG, Client-side](https://www.makeuseof.com/nextjs-rendering-methods-csr-ssr-ssg-isr/#:~:text=CSR%20is%20useful%20for%20pages,want%20to%20update%20in%20intervals.)
+- I don't know much about [Remix](https://remix.run/), but it's the other big server-side React player
