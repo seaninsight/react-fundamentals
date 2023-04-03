@@ -53,53 +53,53 @@
 
 - No forced structure
 - Convention
-- How to structure your components
+- [How to structure your components](https://legacy.reactjs.org/docs/faq-structure.html)
 
 ## How does React connect components to a web page?
 
 - index.js
 - App.js
-- Index.html / <div id=“root” />
+- index.html / &lt;div id=“root” /&gt;
 - ReactDOM.createRoot()
 
 ## A word about class components
 
 - The legacy [Component class](https://react.dev/reference/react/Component) was formerly the only way to create components
 - React discourages classes and considers them _legacy_
-- Error boundaries are the only exception to this rule
+- [Error boundaries](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary) are the only exception to this rule
 
 ## Props and State
 
-- each component has its own "state"
-- props is an array passed to child components to share data
+- Each component has its own [state](https://react.dev/learn/state-a-components-memory)
+- [Props](https://react.dev/learn/passing-props-to-a-component) is an array passed to child components to share data
 
 ## The component lifecycle
 
-- One-way data flow
-- What triggers a render?
+- [One-way data flow](https://react.dev/learn/you-might-not-need-an-effect#passing-data-to-the-parent)
+- [What triggers a render?](https://react.dev/learn/render-and-commit)
 - Component mounting/unmounting
 
 ## Global state
 
-- "prop drilling"
-- React's Context API
-- third-party libs
-  - Redux / Redux Toolkit
-  - Zustand
-  - Jotai
+- ["Prop drilling"](https://kentcdodds.com/blog/prop-drilling) vs [context](https://react.dev/learn/passing-data-deeply-with-context#replace-prop-drilling-with-context) vs third party state management
+- React's [Context API](https://react.dev/reference/react/useContext)
+- Third-party libs
+  - [Redux](https://react-redux.js.org/) / [Redux Toolkit](https://redux-toolkit.js.org/)
+  - [Zustand](https://zustand-demo.pmnd.rs/)
+  - [Jotai](https://jotai.org/)
 
 ## Functional components and hooks
 
-- Lifecycle methods previously only available in classes
-- useState
-- useEffect
-- useRef to persist data between renders
-- useMemo and useCallback for optimization
-- Custom hooks and third-party hooks
+- [Lifecycle methods](https://legacy.reactjs.org/docs/react-component.html) previously only available in classes
+- [useState](https://react.dev/reference/react/useState)
+- [useEffect](https://react.dev/reference/react/useEffect)
+- [useRef](https://react.dev/reference/react/useRef) to persist non-state data between renders
+- [useMemo](https://react.dev/reference/react/useMemo) and [useCallback](https://react.dev/reference/react/useCallback) for optimization
+- [Custom hooks](https://react.dev/learn/reusing-logic-with-custom-hooks) and [third-party hooks](https://usehooks.com/)
 
 ## Events
 
-- These look like JS events but are actually React synthetic events
+- [React events](https://react.dev/learn/responding-to-events) like JS events but are actually React synthetic events
 - Removing events when component unmounts to prevent memory leaks
 
 ## Controlled vs Uncontrolled Inputs
