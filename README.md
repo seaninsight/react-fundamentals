@@ -57,7 +57,7 @@
       <summary>React without JSX example</summary>
 
     ```
-      const BirthdayWish = (props) => {
+      const BirthdayGift = (props) => {
         return React.createElement("div", {}, [
           React.createElement("h1", {}, props.name),
           React.createElement("h2", {}, props.message),
@@ -68,17 +68,17 @@
       const App = () => {
         return React.createElement("div", {}, [
           React.createElement("h1", {}, "Happy Birthday!"),
-          React.createElement(BirthdayWish, {
+          React.createElement(BirthdayGift, {
             name: "Sean",
             message: "Have a great birthday!",
             gift: "Starbucks gift card",
           }),
-          React.createElement(BirthdayWish, {
+          React.createElement(BirthdayGift, {
             name: "David",
             message: "Wishing you the best year ever!",
             gift: "iPhone 14",
           }),
-          React.createElement(BirthdayWish, {
+          React.createElement(BirthdayGift, {
             name: "Hector",
             message: "It's gonna be an awesome year! Happy birthday!",
             gift: "Pappy Van Winkle 20 Year" }),
@@ -114,7 +114,7 @@
           );
         };
     ```
-    
+
     </details>
 
   - [Thinking in react](https://react.dev/learn/thinking-in-react)
