@@ -7,22 +7,22 @@
 
 ## [tl;dr](https://www.youtube.com/watch?v=Tn6-PIqc4UM&t=1s)
 
-- React is a library for making components
-- Components are just functions
-- Pass data with props
-- Track component data with state
+- React is a library for making UI components
+- JSX components are [just functions](https://react.dev/reference/react/createElement)
+- Pass data with [props](https://react.dev/learn/passing-props-to-a-component)
+- Track component data with [state](https://react.dev/learn/managing-state)
 - If props or state change, the component re-renders
-- Use hooks for advanced functionaity
+- Use hooks to connect components with React's API
 - Hooks are also just functions
 - Data always flows parent -> child
-- Use third-party libraries for framework-like experience
+- Use third-party libraries for framework-like experience (routing, global state mgmt, netorking, etc.)
 
 ## React at a high level
 
 - React is a library for creating stateful, interactive UI’s, [not a framework](https://react.dev/learn/start-a-new-react-project)
   - Batteries not included
   - You will need other tools outside of React to complete your app
-    - Routing, data fetching, global state, etc.
+    - Routing, data fetching, global state, animation, etc.
 - React has a one-way data flow (parent -> children)
 - [React Native](https://reactnative.dev/)
 
@@ -45,13 +45,53 @@
 
 - Quick overview of [TS in React](https://github.com/piotrwitek/react-redux-typescript-guide#react--redux-in-typescript---complete-guide)
 - Component [interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html)
+- Data objects
 - [Typing components](https://kentcdodds.com/blog/how-to-write-a-react-component-in-typescript)
 
 ## What is a component?
 
 - Components are functions
+
   - [React.createElement](https://react.dev/reference/react/createElement) / JSX not required
+    <details>
+      <summary>React without JSX example</summary>
+      ```
+        const BirthdayWish= (props) => {
+          return React.createElement("div", {}, [
+            React.createElement("h1", {}, props.name),
+            React.createElement("h2", {}, props.message),
+            React.createElement("h2", {}, props.gift),
+          ]);
+        };
+
+        const App = () => {
+          return React.createElement("div", {}, [
+            React.createElement("h1", {}, "Happy Birthday!"),
+            React.createElement(BirthdayWish, {
+              name: "Sean",
+              message: "Have a great birthday!",
+              gift: "Starbucks gift card",
+            }),
+            React.createElement(BirthdayWish, {
+              name: "David",
+              message: "Wishing you the best year ever!",
+              gift: "iPhone 14",
+            }),
+            React.createElement(BirthdayWish, {
+              name: "Hector",
+              message: "It's gonna be an awesome year! Happy birthday!",
+              gift: "Pappy Van Winkle 20 Year" }),
+          ]);
+        };
+
+        ReactDOM.render(React.createElement(App), document.getElementById("root"));
+
+    ```
+    </details>
+    ```
+
   - [Thinking in react](https://react.dev/learn/thinking-in-react)
+
 - [JSX](https://react.dev/learn/writing-markup-with-jsx) is not ugly 😉
 - [State](https://react.dev/learn/managing-state)
 - [Props](https://react.dev/learn/passing-props-to-a-component)
