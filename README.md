@@ -121,7 +121,7 @@
 
   - [Thinking in react](https://react.dev/learn/thinking-in-react)
 
-- [JSX](https://react.dev/learn/writing-markup-with-jsx) is not ugly 😉
+- When you're in [JSX](https://react.dev/learn/writing-markup-with-jsx), use curly braces `{ //js }` to leave JSX and use a JavaScript expression.
 - [State](https://react.dev/learn/managing-state)
 - [Props](https://react.dev/learn/passing-props-to-a-component)
 
