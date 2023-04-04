@@ -55,39 +55,42 @@
   - [React.createElement](https://react.dev/reference/react/createElement) / JSX not required
     <details>
       <summary>React without JSX example</summary>
-      ```
-        const BirthdayWish= (props) => {
-          return React.createElement("div", {}, [
-            React.createElement("h1", {}, props.name),
-            React.createElement("h2", {}, props.message),
-            React.createElement("h2", {}, props.gift),
-          ]);
-        };
-
-        const App = () => {
-          return React.createElement("div", {}, [
-            React.createElement("h1", {}, "Happy Birthday!"),
-            React.createElement(BirthdayWish, {
-              name: "Sean",
-              message: "Have a great birthday!",
-              gift: "Starbucks gift card",
-            }),
-            React.createElement(BirthdayWish, {
-              name: "David",
-              message: "Wishing you the best year ever!",
-              gift: "iPhone 14",
-            }),
-            React.createElement(BirthdayWish, {
-              name: "Hector",
-              message: "It's gonna be an awesome year! Happy birthday!",
-              gift: "Pappy Van Winkle 20 Year" }),
-          ]);
-        };
-
-        ReactDOM.render(React.createElement(App), document.getElementById("root"));
 
     ```
+      const BirthdayWish= (props) => {
+        return React.createElement("div", {}, [
+          React.createElement("h1", {}, props.name),
+          React.createElement("h2", {}, props.message),
+          React.createElement("h2", {}, props.gift),
+        ]);
+      };
+
+      const App = () => {
+        return React.createElement("div", {}, [
+          React.createElement("h1", {}, "Happy Birthday!"),
+          React.createElement(BirthdayWish, {
+            name: "Sean",
+            message: "Have a great birthday!",
+            gift: "Starbucks gift card",
+          }),
+          React.createElement(BirthdayWish, {
+            name: "David",
+            message: "Wishing you the best year ever!",
+            gift: "iPhone 14",
+          }),
+          React.createElement(BirthdayWish, {
+            name: "Hector",
+            message: "It's gonna be an awesome year! Happy birthday!",
+            gift: "Pappy Van Winkle 20 Year" }),
+        ]);
+      };
+
+      ReactDOM.render(React.createElement(App), document.getElementById("root"));
+    ```
+
     </details>
+
+    ```
 
     ```
 
