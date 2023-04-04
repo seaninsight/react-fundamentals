@@ -90,6 +90,47 @@
 
     </details>
     <details>
+      <summary>Same example with JSX _and_ `Array.map`</summary>
+
+    ```
+        const BirthdayGift = ({name, message, gift}) => {
+          return (
+            <div>
+              <h1>{name}</h1>
+              <h2>{message}</h2>
+              <h2>{gift}</h2>
+            </div>
+          )
+        };
+
+        const App = () => {
+          return (
+            <div>
+              <h1>Happy Birthday!</h1>
+              <BirthdayGift
+                name="Sean"
+                message="Have a great birthday!"
+                gift="Starbucks gift card"
+              />
+              <BirthdayGift
+                name="David"
+                message="Wishing you the best year ever!"
+                gift="iPhone 14"
+              />
+              <BirthdayGift
+                name="Hector"
+                message="It's gonna be an awesome year! Happy birthday!"
+                gift="Pappy Van Winkle 20 Year"
+              />
+            </div>
+          );
+        };
+
+        ReactDOM.render(React.createElement(App), document.getElementById("root"));
+    ```
+
+    </details>
+    <details>
       <summary>Same example with JSX</summary>
 
     ```
@@ -138,47 +179,6 @@
                   />
                 ))
               }
-            </div>
-          );
-        };
-
-        ReactDOM.render(React.createElement(App), document.getElementById("root"));
-    ```
-
-    </details>
-    <details>
-      <summary>Same example with JSX _and_ `Array.map`</summary>
-
-    ```
-        const BirthdayGift = ({name, message, gift}) => {
-          return (
-            <div>
-              <h1>{name}</h1>
-              <h2>{message}</h2>
-              <h2>{gift}</h2>
-            </div>
-          )
-        };
-
-        const App = () => {
-          return (
-            <div>
-              <h1>Happy Birthday!</h1>
-              <BirthdayGift
-                name="Sean"
-                message="Have a great birthday!"
-                gift="Starbucks gift card"
-              />
-              <BirthdayGift
-                name="David"
-                message="Wishing you the best year ever!"
-                gift="iPhone 14"
-              />
-              <BirthdayGift
-                name="Hector"
-                message="It's gonna be an awesome year! Happy birthday!"
-                gift="Pappy Van Winkle 20 Year"
-              />
             </div>
           );
         };
