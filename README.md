@@ -93,6 +93,63 @@
       <summary>Same example with JSX</summary>
 
     ```
+        const presents = [
+          {
+            name: 'Sean',
+            message: 'Have a great birthday!',
+            gift: 'Starbucks gift card',
+            id: '123abc'
+          },
+          {
+            name: 'David',
+            message: 'Wishing you the best year ever!',
+            gift: 'iPhone 14',
+            id: '456jkl'
+          },
+          {
+            name: 'Hector',
+            message: 'It's gonna be an awesome year! Happy birthday!',
+            gift: 'Pappy Van Winkle 20 Year',
+            id: '789xyz'
+          },
+        ];
+
+        const BirthdayGift = ({name, message, gift}) => {
+          return (
+            <div>
+              <h1>{name}</h1>
+              <h2>{message}</h2>
+              <h2>{gift}</h2>
+            </div>
+          )
+        };
+
+        const App = () => {
+          return (
+            <div>
+              <h1>Happy Birthday!</h1>
+              {
+                presents.map(present => (
+                  <BirthdayGift
+                    key={present.id}
+                    name={present.name}
+                    message={present.message}
+                    gift={present.gift}
+                  />
+                ))
+              }
+            </div>
+          );
+        };
+
+        ReactDOM.render(React.createElement(App), document.getElementById("root"));
+    ```
+
+    </details>
+    <details>
+      <summary>Same example with JSX _and_ `Array.map`</summary>
+
+    ```
         const BirthdayGift = ({name, message, gift}) => {
           return (
             <div>
