@@ -14,7 +14,7 @@ const router = createBrowserRouter(
     },
     {
       path: '/hello',
-      element: <Hello name="Sean" />,
+      element: <Hello name="Sean McCambridge" />,
     },
     {
       path: '/login',
