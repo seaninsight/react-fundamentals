@@ -15,7 +15,7 @@
 - Use hooks to connect components with React's API
 - Hooks are also just functions
 - Data always flows parent -> child
-- Use third-party libraries for framework-like experience (routing, global state mgmt, netorking, etc.)
+- Use third-party libraries for framework-like experience (routing, global state mgmt, networking, etc.)
 
 ## React at a high level
 
@@ -119,7 +119,7 @@
 
     </details>
 
-  - [Thinking in react](https://react.dev/learn/thinking-in-react)
+  - [Thinking in React](https://react.dev/learn/thinking-in-react)
 
 - When you're in [JSX](https://react.dev/learn/writing-markup-with-jsx), use curly braces `{ //js }` to leave JSX and use a JavaScript expression.
 - [State](https://react.dev/learn/managing-state)
@@ -140,7 +140,7 @@
 
 ## A word about class components
 
-- The legacy [Component class](https://react.dev/reference/react/Component) was formerly the only way to create components
+- The legacy [Component class](https://react.dev/reference/react/Component#constructor) was formerly the only way to create components
 - React discourages classes and considers them _legacy_
 - [Error boundaries](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary) are the only exception to this rule
 
