@@ -133,10 +133,14 @@
 
 ## How does React connect components to a web page?
 
-- index.js
-- App.js
-- index.html / &lt;div id=“root” /&gt;
-- ReactDOM.createRoot()
+- index.html
+  - `<script src="/src/main.tsx" ...>` reads 'main.tsx'
+  - `<div id=“root” />` creates '#root' in HTML
+- main.tsx
+  - `import App from './App'` reads 'App' from 'App.tsx'
+  - `ReactDOM.createRoot(...)` places content into '#root'
+- App.tsx
+  - `export default App`
 
 ## A word about class components
 
