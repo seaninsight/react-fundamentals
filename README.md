@@ -107,9 +107,21 @@
           return (
             <div>
               <h1>Happy Birthday!</h1>
-              <BirthdayGift name="Sean" message="Have a great birthday!" gift="Starbucks gift card" />
-              <BirthdayGift name="David" message="Wishing you the best year ever!" gift="iPhone 14" />
-              <BirthdayGift name="Hector" message="It's gonna be an awesome year! Happy birthday!" gift="Pappy Van Winkle 20 Year" />
+              <BirthdayGift
+                name="Sean"
+                message="Have a great birthday!"
+                gift="Starbucks gift card"
+              />
+              <BirthdayGift
+                name="David"
+                message="Wishing you the best year ever!"
+                gift="iPhone 14"
+              />
+              <BirthdayGift
+                name="Hector"
+                message="It's gonna be an awesome year! Happy birthday!"
+                gift="Pappy Van Winkle 20 Year"
+              />
             </div>
           );
         };
