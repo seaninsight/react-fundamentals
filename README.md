@@ -90,10 +90,6 @@
 
     </details>
 
-    ```
-
-    ```
-
   - [Thinking in react](https://react.dev/learn/thinking-in-react)
 
 - [JSX](https://react.dev/learn/writing-markup-with-jsx) is not ugly 😉
