@@ -91,28 +91,28 @@
     </details>
     <details>
       <summary>Same example with JSX</summary>
-    ```
-      const BirthdayWish = ({name, message, gift}) => {
-        return (
-          <div>
-            <h1>{name}</h1>
-            <h2>{message}</h2>
-            <h2>{gift}</h2>
-          </div>
-        )
-      };
+      ```
+        const BirthdayWish = ({name, message, gift}) => {
+          return (
+            <div>
+              <h1>{name}</h1>
+              <h2>{message}</h2>
+              <h2>{gift}</h2>
+            </div>
+          )
+        };
 
-      const App = () => {
-        return (
-          <div>
-            <h1>Happy Birthday!</h1>
-            <BirthdayWish name="Sean" message="Have a great birthday!" gift="Starbucks gift card" />
-            <BirthdayWish name="David" message="Wishing you the best year ever!" gift="iPhone 14" />
-            <BirthdayWish name="Hector" message="It's gonna be an awesome year! Happy birthday!" gift="Pappy Van Winkle 20 Year" />
-          </div>
-        );
-      };
-    ```
+        const App = () => {
+          return (
+            <div>
+              <h1>Happy Birthday!</h1>
+              <BirthdayWish name="Sean" message="Have a great birthday!" gift="Starbucks gift card" />
+              <BirthdayWish name="David" message="Wishing you the best year ever!" gift="iPhone 14" />
+              <BirthdayWish name="Hector" message="It's gonna be an awesome year! Happy birthday!" gift="Pappy Van Winkle 20 Year" />
+            </div>
+          );
+        };
+      ```
     </details>
 
   - [Thinking in react](https://react.dev/learn/thinking-in-react)
