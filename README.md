@@ -91,7 +91,8 @@
     </details>
     <details>
       <summary>Same example with JSX</summary>
-      ```
+
+    ```
         const BirthdayWish = ({name, message, gift}) => {
           return (
             <div>
@@ -112,7 +113,8 @@
             </div>
           );
         };
-      ```
+    ```
+    
     </details>
 
   - [Thinking in react](https://react.dev/learn/thinking-in-react)
