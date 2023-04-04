@@ -93,7 +93,7 @@
       <summary>Same example with JSX</summary>
 
     ```
-        const BirthdayWish = ({name, message, gift}) => {
+        const BirthdayGift = ({name, message, gift}) => {
           return (
             <div>
               <h1>{name}</h1>
@@ -107,9 +107,9 @@
           return (
             <div>
               <h1>Happy Birthday!</h1>
-              <BirthdayWish name="Sean" message="Have a great birthday!" gift="Starbucks gift card" />
-              <BirthdayWish name="David" message="Wishing you the best year ever!" gift="iPhone 14" />
-              <BirthdayWish name="Hector" message="It's gonna be an awesome year! Happy birthday!" gift="Pappy Van Winkle 20 Year" />
+              <BirthdayGift name="Sean" message="Have a great birthday!" gift="Starbucks gift card" />
+              <BirthdayGift name="David" message="Wishing you the best year ever!" gift="iPhone 14" />
+              <BirthdayGift name="Hector" message="It's gonna be an awesome year! Happy birthday!" gift="Pappy Van Winkle 20 Year" />
             </div>
           );
         };
