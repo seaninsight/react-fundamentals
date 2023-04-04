@@ -63,8 +63,7 @@
             React.createElement("h2", {}, props.gift),
           ]);
         };
-      ```
-      ```
+
         const App = () => {
           return React.createElement("div", {}, [
             React.createElement("h1", {}, "Happy Birthday!"),
@@ -89,6 +88,7 @@
 
     ```
     </details>
+
     ```
 
   - [Thinking in react](https://react.dev/learn/thinking-in-react)
