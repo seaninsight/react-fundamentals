@@ -148,12 +148,59 @@ const SlideContent = [
 
   <div className="text-left min-w-[768px]">
     <h2 className="py-6">
+      <strong>Basic internal structure</strong>
+    </h2>
+    <CodeBlock
+      language="javascript"
+      text="
+      // MyComponent.tsx
+      // Internal structure
+
+      // imports
+      import blah from 'yada'
+      import 'MyComponent.css'
+
+      // non-React declarations, etc.
+      const someArray = [1, 2, 3, 4, 5]
+
+      // component
+      export default function MyComponent({someProp}) {
+        // local component state
+        const [numberOfPuppies, setNumberOfPuppies] = useState(99999)
+
+        // effects
+        useEffect(() => {
+          someEffectCode()
+          return () => undoEffect()
+        }, [])
+
+        // event handlers
+        const onCompletionOfThisPresentation = () => showerPresenterWithApplause()
+
+        // code perhaps refactored out of return statement for readability...
+        // etc
+
+        // return JSX
+        return (
+          <div className=&quot;MyComponent&quot;>
+            <h1>Some Stuffs</h1>
+            <button onClick={onCompletionOfThisPresentation}>Applause!</button>
+          </div>
+        )
+      }
+      "
+      showLineNumbers={false}
+    />
+  </div>,
+
+  <div className="text-left min-w-[768px]">
+    <h2 className="py-6">
       <strong>Container/Presentation pattern</strong>
     </h2>
     <CodeBlock
       language="javascript"
       text="
-      # RegisterUserContainer.tsx
+      // RegisterUserContainer.tsx
 
       export default function RegisterUserContainer() {
         import './RegisterUserComponent'
@@ -185,7 +232,7 @@ const SlideContent = [
         )
       }
 
-      # RegisterUserComponent.tsx
+      // RegisterUserComponent.tsx
       import './Button'
 
       interface Props {
@@ -237,7 +284,7 @@ const SlideContent = [
         }
       }
 
-      # Button.tsx
+      // Button.tsx
       import './Button.css'
 
       interface ButtonProps {
@@ -267,7 +314,7 @@ const SlideContent = [
     <CodeBlock
       language="javascript"
       text="
-      # Button.tsx
+      // Button.tsx
       interface ButtonTypes {
         text: string
         onClick: () => void
@@ -289,8 +336,8 @@ const SlideContent = [
         )
       }
 
-      # Use in another component
-      # SomeComponent.tsx
+      // Use in another component
+      // SomeComponent.tsx
 
       import '../organisms/DownloadButton'
 
@@ -321,7 +368,7 @@ const SlideContent = [
     <CodeBlock
       language="javascript"
       text="
-      # pages/RegisterUserPage.tsx
+      // pages/RegisterUserPage.tsx
 
       export default function RegisterUserPage() {
         import '../templates/RegisterUser'
@@ -336,7 +383,7 @@ const SlideContent = [
         )
       }
 
-      # templates/RegisterUser.tsx
+      // templates/RegisterUser.tsx
 
       import './Button'
 
