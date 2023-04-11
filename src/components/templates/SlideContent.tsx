@@ -200,7 +200,7 @@ const SlideContent = [
         password,
         onSubmit,
         onInput,
-      }) {
+      }: Props) {
         return (
           <form className=&quot;RegisterUserComponent&quot;>
             <p>username</p>
@@ -223,7 +223,7 @@ const SlideContent = [
     </h2>
     <CodeBlock
       language="javascript"
-      text='
+      text="
       components/
         atoms/
           Button.css
@@ -238,13 +238,25 @@ const SlideContent = [
       }
 
       # Button.tsx
-      export default function Button(): JSX.Element {
+      import './Button.css'
+
+      interface ButtonProps {
+        text?: string
+        onClick: () => void
+      }
+
+      export default function Button({text='Imma Button!', onClick}: ButtonProps): JSX.Element {
         // simple example &mdash; more soon
         return (
-          <button className="Button"&gt;Imma button!&lt;/button&gt;
+          <button
+            onClick={onClick}
+            className=&quot;Button&quot;
+          &gt;
+            {text}
+          &lt;/button&gt;
         )
       }
-      '
+      "
       showLineNumbers={false}
     />
   </div>,
@@ -258,35 +270,18 @@ const SlideContent = [
       # Button.tsx
       interface ButtonTypes {
         text: string
-        url: string
+        onClick: () => void
       }
 
-      export default function DownloadButton({text, url}: ButtonTypes): JSX.Element {
+      export default function DownloadButton({text, onClick}: ButtonTypes): JSX.Element {
         // imports first
-        import { useState } from 'react'
         import Button from './atoms/Button'
         import Icon from './atoms/Icon'
-        import './molecules/DownloadButton.css'
+        import './DownloadButton.css'
 
-        // create state
-        const [loading, setLoading] = useState<boolean>(true)
-
-        // create handler
-        const downloadButtonHandler = async (event) => {
-          if (loading) {
-            return
-          }
-          setLoading(true)
-          const response = await fetch(url)
-          const file = await response.json()
-          setLoading(false)
-          fakeTriggerDownloadFunction(file)
-        }
-
-        // return your JSX
         return (
           &lt;Button
-            onClick={downloadButtonHandler}
+            onClick={onClick}
             className=&quot;DownloadButton&quot;&gt;
             {text}
             &lt;Icon type=&quot;download&quot; /&gt;
@@ -294,19 +289,22 @@ const SlideContent = [
         )
       }
 
-
       # Use in another component
       # SomeComponent.tsx
 
       import '../organisms/DownloadButton'
 
-      export default function SomeComponent() {
+      interface SomeComponentProps {
+        downloadChatGPT: () => void
+      }
+
+      export default function SomeComponent({downloadChatGPT}: SomeComponentProps) {
         return (
           <div className=&quot;SomeComponent&quot;>
             { /* ... */ }
             <DownloadButton 
               text=&quot;Never do your homework again&quot;
-              url=&quot;https://openai.com/download/chat-gpt-5&quot;
+              onClick={() => downloadChatGPT()}
             />
           </div>
         )
@@ -346,7 +344,7 @@ const SlideContent = [
         registerUserService: Promise<string, string>
       }
 
-      export default function RegisterUser() {
+      export default function RegisterUser({registerUserService}: Props) {
         // component state
         const [username, setUsername] = useState<string>('')
         const [password, setPassword] = useState<string>('')
