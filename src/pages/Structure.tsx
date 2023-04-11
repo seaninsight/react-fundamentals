@@ -304,7 +304,7 @@ const slides = [
 function Slides(): JSX.Element {
   const [currentSlide, setCurrentSlide] = useState<number>(0)
 
-  const onKeyDown = (event: React.KeyboardEvent<Document>) => {
+  const onKeyDown = (event: KeyboardEvent): void => {
     console.log('current slide before', currentSlide)
     if (event.code === 'ArrowRight') {
       if (slides.length === currentSlide + 1) {
