@@ -2,6 +2,8 @@ import { CodeBlock, dracula } from 'react-code-blocks'
 import imgMacro from '../../assets/slides/macro.jpg'
 import imgMicro from '../../assets/slides/snowflake.jpg'
 import imgEmeril from '../../assets/slides/emeril.jpg'
+import imgSpaghetti from '../../assets/slides/spaghetti.jpeg'
+import imgQuestions from '../../assets/slides/questions.avif'
 
 const SlideContent = [
   <h1>Structuring React Components</h1>,
@@ -376,6 +378,50 @@ const SlideContent = [
       showLineNumbers={false}
     />
   </div>,
+
+  <h1>Keep it short</h1>,
+  <h1>Keep it DRY</h1>,
+  <h1>Refactor</h1>,
+
+  <img className="max-w-[40%] m-auto" src={imgSpaghetti} />,
+
+  <div className="text-left min-w-[768px]">
+    <h2 className="py-6">
+      <strong>A typical React application structure</strong>
+    </h2>
+    <CodeBlock
+      language="javascript"
+      text="
+      assets/
+      components/
+        atoms/
+        molecules/
+        organisms/
+        templates/
+      config/
+      constants/
+      hooks/
+      pages/
+      routes/
+      services/
+      store/
+      stories/
+      styles/
+      types/
+      utilities/
+      App.tsx
+      main.tsx
+      ...
+      "
+      showLineNumbers={false}
+    />
+  </div>,
+
+  <h1>
+    <span className="text-sm">(actually)</span>THE END
+  </h1>,
+
+  <img className="max-w-[70%] m-auto" src={imgQuestions} />,
 ]
 
 export default SlideContent
