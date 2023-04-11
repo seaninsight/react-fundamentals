@@ -4,6 +4,7 @@ import App from './App'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Hello from './pages/Hello'
 import LoginPage from './pages/Login'
+import StructuringPage from './pages/Structure'
 import './index.css'
 
 const router = createBrowserRouter(
@@ -20,13 +21,16 @@ const router = createBrowserRouter(
       path: '/login',
       element: <LoginPage />,
     },
+    {
+      path: '/structuring-components',
+      element: <StructuringPage />,
+    },
   ],
   { basename: '/react-fundamentals' },
 )
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    {/* <App /> */}
     <RouterProvider router={router} />
   </React.StrictMode>,
 )

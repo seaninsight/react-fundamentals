@@ -28,6 +28,9 @@ function App() {
         <p className="my-4">
           <Link to="/login">Log in</Link>
         </p>
+        <p className="my-4">
+          <Link to="/structuring-components">Structuring Components</Link>
+        </p>
       </div>
     </div>
   )
