@@ -22,9 +22,9 @@ function App() {
         <button onClick={() => setCount(count => count + 1)}>
           count is {count}
         </button>
-        <p className="my-4">
+        {/* <p className="my-4">
           <Link to="/hello">Say hello</Link>
-        </p>
+        </p> */}
         <p className="my-4">
           <Link to="/login">Log in</Link>
         </p>
