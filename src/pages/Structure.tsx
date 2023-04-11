@@ -212,7 +212,7 @@ const slides = [
 
   <div className="text-left min-w-[768px]">
     <h2 className="py-6">
-      <strong>Atomic Design -- Button atom</strong>
+      <strong>Atomic Design &mdash; Button atom</strong>
     </h2>
     <CodeBlock
       language="javascript"
@@ -222,7 +222,7 @@ const slides = [
           Button.css
           Button.tsx
 
-      /* Button.css -- I like using BEM */
+      /* Button.css &mdash; I like using BEM */
       .Button {
         background-color: #cfd;
         &--active {
@@ -232,7 +232,7 @@ const slides = [
 
       # Button.tsx
       export default function Button(): JSX.Element {
-        // simple example -- more soon
+        // simple example &mdash; more soon
         return (
           <button className="Button"&gt;Imma button!&lt;/button&gt;
         )
@@ -243,7 +243,7 @@ const slides = [
   </div>,
   <div className="text-left min-w-[768px]">
     <h2 className="py-6">
-      <strong>Atomic Design -- DownloadButton.tsx</strong>
+      <strong>Atomic Design &mdash; DownloadButton.tsx</strong>
     </h2>
     <CodeBlock
       language="javascript"
@@ -257,7 +257,7 @@ const slides = [
       export default function DownloadButton({text, url}: ButtonTypes): JSX.Element {
         // imports first
         import { useState } from 'react'
-        import DownloadButton from './molecules/DownloadButton'
+        import Button from './atoms/Button'
         import './molecules/DownloadButton.css'
 
         // create state
@@ -271,6 +271,7 @@ const slides = [
           setLoading(true)
           const response = await fetch(url)
           const file = await response.json()
+          setLoading(false)
           fakeTriggerDownloadFunction(file)
         }
 
@@ -295,6 +296,69 @@ const slides = [
           </div>
         )
       }
+      "
+      showLineNumbers={false}
+    />
+  </div>,
+  <h1>Putting it all together</h1>,
+  <div className="text-left min-w-[768px]">
+    <h2 className="py-6">
+      <strong>Atomic Design &mdash; Pages &amp; Templates</strong>
+    </h2>
+    <CodeBlock
+      language="javascript"
+      text="
+      # pages/RegisterUserPage.tsx
+
+      export default function RegisterUserPage() {
+        import '../templates/RegisterUser'
+
+        // This would probably be imported from /services somehow
+        const registerUserService = async (username, password) => {
+          fetch('/register-user', { ... })
+        }
+
+        return (
+          <RegisterUser registerUserService={registerUserService} />
+        )
+      }
+
+      # templates/RegisterUser.tsx
+
+      import './Button'
+
+      interface Props {
+        registerUserService: Promise<string, string>
+      }
+
+      export default function RegisterUser() {
+        // component state
+        const [username, setUsername] = useState<string>('')
+        const [password, setPassword] = useState<string>('')
+
+        // API calls
+        const onSubmit = (e) => {
+          // validation then call to server
+          const response = await registerUserService(username, password, /* ... */)
+          // ...
+        }
+
+        const onInput = (e, value) => {
+          // input handlers
+          // ...
+        }
+
+        return (
+          <form className=&quot;RegisterUser&quot;>
+            <p>username</p>
+            <input onInput={onInput} value={username} />
+            <p>password</p>
+            <input onInput={onInput} value={password} />
+            <Button onSubmit={onSubmit}>Submit</Button>
+          </form>
+        )
+      }
+
       "
       showLineNumbers={false}
     />
